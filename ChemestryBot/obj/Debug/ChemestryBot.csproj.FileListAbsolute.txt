@@ -1,0 +1,39 @@
+c:\users\sovan\documents\visual studio 2015\Projects\ChemestryBot\ChemestryBot\bin\Bot Application1.dll.config
+c:\users\sovan\documents\visual studio 2015\Projects\ChemestryBot\ChemestryBot\bin\Bot Application1.dll
+c:\users\sovan\documents\visual studio 2015\Projects\ChemestryBot\ChemestryBot\bin\Bot Application1.pdb
+c:\users\sovan\documents\visual studio 2015\Projects\ChemestryBot\ChemestryBot\bin\Autofac.dll
+c:\users\sovan\documents\visual studio 2015\Projects\ChemestryBot\ChemestryBot\bin\Chronic.dll
+c:\users\sovan\documents\visual studio 2015\Projects\ChemestryBot\ChemestryBot\bin\Microsoft.Bot.Builder.dll
+c:\users\sovan\documents\visual studio 2015\Projects\ChemestryBot\ChemestryBot\bin\Microsoft.Bot.Connector.dll
+c:\users\sovan\documents\visual studio 2015\Projects\ChemestryBot\ChemestryBot\bin\Microsoft.IdentityModel.Protocol.Extensions.dll
+c:\users\sovan\documents\visual studio 2015\Projects\ChemestryBot\ChemestryBot\bin\Microsoft.Rest.ClientRuntime.dll
+c:\users\sovan\documents\visual studio 2015\Projects\ChemestryBot\ChemestryBot\bin\Microsoft.WindowsAzure.Configuration.dll
+c:\users\sovan\documents\visual studio 2015\Projects\ChemestryBot\ChemestryBot\bin\Newtonsoft.Json.dll
+c:\users\sovan\documents\visual studio 2015\Projects\ChemestryBot\ChemestryBot\bin\System.IdentityModel.Tokens.Jwt.dll
+c:\users\sovan\documents\visual studio 2015\Projects\ChemestryBot\ChemestryBot\bin\System.Net.Http.Formatting.dll
+c:\users\sovan\documents\visual studio 2015\Projects\ChemestryBot\ChemestryBot\bin\System.Web.Http.dll
+c:\users\sovan\documents\visual studio 2015\Projects\ChemestryBot\ChemestryBot\bin\System.Web.Http.WebHost.dll
+c:\users\sovan\documents\visual studio 2015\Projects\ChemestryBot\ChemestryBot\bin\Autofac.xml
+c:\users\sovan\documents\visual studio 2015\Projects\ChemestryBot\ChemestryBot\bin\Microsoft.Bot.Builder.xml
+c:\users\sovan\documents\visual studio 2015\Projects\ChemestryBot\ChemestryBot\bin\Microsoft.Bot.Connector.xml
+c:\users\sovan\documents\visual studio 2015\Projects\ChemestryBot\ChemestryBot\bin\Microsoft.IdentityModel.Protocol.Extensions.pdb
+c:\users\sovan\documents\visual studio 2015\Projects\ChemestryBot\ChemestryBot\bin\Microsoft.IdentityModel.Protocol.Extensions.xml
+c:\users\sovan\documents\visual studio 2015\Projects\ChemestryBot\ChemestryBot\bin\Microsoft.Rest.ClientRuntime.xml
+c:\users\sovan\documents\visual studio 2015\Projects\ChemestryBot\ChemestryBot\bin\Microsoft.WindowsAzure.Configuration.xml
+c:\users\sovan\documents\visual studio 2015\Projects\ChemestryBot\ChemestryBot\bin\Newtonsoft.Json.xml
+c:\users\sovan\documents\visual studio 2015\Projects\ChemestryBot\ChemestryBot\bin\System.IdentityModel.Tokens.Jwt.pdb
+c:\users\sovan\documents\visual studio 2015\Projects\ChemestryBot\ChemestryBot\bin\System.IdentityModel.Tokens.Jwt.xml
+c:\users\sovan\documents\visual studio 2015\Projects\ChemestryBot\ChemestryBot\bin\System.Net.Http.Formatting.xml
+c:\users\sovan\documents\visual studio 2015\Projects\ChemestryBot\ChemestryBot\bin\System.Web.Http.xml
+c:\users\sovan\documents\visual studio 2015\Projects\ChemestryBot\ChemestryBot\bin\System.Web.Http.WebHost.xml
+c:\users\sovan\documents\visual studio 2015\Projects\ChemestryBot\ChemestryBot\bin\ar\Microsoft.Bot.Builder.resources.dll
+c:\users\sovan\documents\visual studio 2015\Projects\ChemestryBot\ChemestryBot\bin\en\Microsoft.Bot.Builder.resources.dll
+c:\users\sovan\documents\visual studio 2015\Projects\ChemestryBot\ChemestryBot\bin\es\Microsoft.Bot.Builder.resources.dll
+c:\users\sovan\documents\visual studio 2015\Projects\ChemestryBot\ChemestryBot\bin\fa\Microsoft.Bot.Builder.resources.dll
+c:\users\sovan\documents\visual studio 2015\Projects\ChemestryBot\ChemestryBot\bin\fr\Microsoft.Bot.Builder.resources.dll
+c:\users\sovan\documents\visual studio 2015\Projects\ChemestryBot\ChemestryBot\bin\ja\Microsoft.Bot.Builder.resources.dll
+c:\users\sovan\documents\visual studio 2015\Projects\ChemestryBot\ChemestryBot\bin\ru\Microsoft.Bot.Builder.resources.dll
+c:\users\sovan\documents\visual studio 2015\Projects\ChemestryBot\ChemestryBot\bin\zh-hans\Microsoft.Bot.Builder.resources.dll
+c:\users\sovan\documents\visual studio 2015\Projects\ChemestryBot\ChemestryBot\obj\Debug\ChemestryBot.csprojResolveAssemblyReference.cache
+c:\users\sovan\documents\visual studio 2015\Projects\ChemestryBot\ChemestryBot\obj\Debug\Bot Application1.dll
+c:\users\sovan\documents\visual studio 2015\Projects\ChemestryBot\ChemestryBot\obj\Debug\Bot Application1.pdb
