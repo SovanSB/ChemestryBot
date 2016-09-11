@@ -19,7 +19,7 @@ namespace ChemestryBot.UtilClasses
                 Unit temp = MessagesController.BotCategories[code.PointAt].Units[code.IndexArray[code.PointAt]];
                 Activity activity = new Activity(ActivityTypes.Message);
                 var actions = new List<CardAction>();
-                actions.Add(AttachmentCreation.CreateCardAction(ValuesStrings.NEXT, "Next"));
+                actions.Add(AttachmentCreation.CreateCardAction(ValuesStrings.NEXT, ValuesStrings.NEXT));
                 
                 List<CardImage> imageList = new List<CardImage>();
 //                activity.Text = temp.description;

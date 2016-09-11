@@ -123,13 +123,17 @@
     <Compile Include="Dialogs\ChooseCategoryDialog.cs" />
     <Compile Include="Dialogs\InformationDialog.cs" />
     <Compile Include="Dialogs\MotherDialog.cs" />
+    <Compile Include="Dialogs\TestDialog.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Interface\IContentInterface.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UtilClasses\AttachmentCreation.cs" />
     <Compile Include="UtilClasses\Category.cs" />
     <Compile Include="UtilClasses\CodeClass.cs" />
+    <Compile Include="UtilClasses\Tests\TestQuestion.cs" />
+    <Compile Include="UtilClasses\Tests\TestSeries.cs" />
     <Compile Include="UtilClasses\Theme.cs" />
     <Compile Include="UtilClasses\CategoryOperation.cs" />
     <Compile Include="UtilClasses\Unit.cs" />
@@ -137,6 +141,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+    <Content Include="ClassDiagram1.cd" />
     <None Include="Properties\PublishProfiles\ChemestryBot.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
