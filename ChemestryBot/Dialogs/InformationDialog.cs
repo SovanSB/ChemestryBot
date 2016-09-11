@@ -12,10 +12,10 @@ using Microsoft.Bot.Connector;
 namespace ChemestryBot.Dialogs
 {
     [Serializable]
-    public class InformationDialog : IDialog<String>
+    public class InformationDialog : IDialog<CodeClass>
     {
         private CodeClass mCode;
-        private IContentInterface mContent;
+        private IContentInterface mContent = new CategoryOperation();
 
         public InformationDialog(CodeClass code)
         {
@@ -25,13 +25,23 @@ namespace ChemestryBot.Dialogs
         public async Task StartAsync(IDialogContext context)
         {
             Activity toShow = mContent.GetContent(mCode);
-//            Activity act = new Activity(ActivityTypes.Message);
-
-
-
+            if (toShow != null)
+            {
+                IMessageActivity toSend = context.MakeMessage();
+                toSend.Attachments = toShow.Attachments;
+                toSend.Text = toShow.Text;
+                ShowActivity(toSend, context);
+                return;
+            }
+            else // something went wrong
+            {
+                mCode.PointAt = -1;
+                context.Done(mCode);
+                return;
+            }
         }
 
-        private async void ShowActivity(Activity activity, IDialogContext context)
+        private async void ShowActivity(IMessageActivity activity, IDialogContext context)
         {
             if (activity == null)
             {
@@ -41,8 +51,22 @@ namespace ChemestryBot.Dialogs
             {
                 return;
             }
-            if (activity.HasContent())
+            if (activity.Attachments != null && activity.Attachments.Count > 0)
             {
+                string text = activity.Text;
+                activity.Text = null;
+                context.PostAsync(activity);
+                
+                                PromptDialog.Choice<string>(
+                                    context,
+                                    ResumeAfterChoise,
+                                    new[]
+                                    {
+                                        ValuesStrings.NEXT//, ValuesStrings.STATISTICS, ValuesStrings.CHANGE_NICK
+                //                        ValuesStrings.ENTER_QUEUE
+                                    },
+                                    text,
+                                    retry: "Sorry, I didn't understand you:( Please be more accurate in your wishes!");
                 return; // handling would be added later
             }
             PromptDialog.Choice<string>(
