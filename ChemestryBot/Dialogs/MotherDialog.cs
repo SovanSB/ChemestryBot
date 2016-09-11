@@ -13,7 +13,7 @@ namespace ChemestryBot.Dialogs
     public class MotherDialog : IDialog<string>
     {
         private CodeClass mCode = null;
-        public MotherDialog(Activity activity)
+        public MotherDialog()
         {
             
         }
@@ -22,10 +22,18 @@ namespace ChemestryBot.Dialogs
         public async Task StartAsync(IDialogContext context)
         {
             mCode = new CodeClass();
-            await context.PostAsync("Choose the category");
-            context.Call(new ChooseCategoryDialog(mCode), ResumeAfterCategoryChoise);
+//            await context.PostAsync("Choose the category");
+            context.PostAsync(ValuesStrings.HELLO);
+            context.Wait(ResumeAfterGreeting);
+            
 //            context.Call(new InformationDialog(new CodeClass()), ResumeAfterInformation);
             //throw new NotImplementedException();
+        }
+
+        private async Task ResumeAfterGreeting(IDialogContext context, IAwaitable<IMessageActivity> result)
+        {
+                        context.Call(new ChooseCategoryDialog(new CodeClass()), ResumeAfterCategoryChoise);
+//            context.Call(new InformationDialog(new CodeClass()), ResumeAfterInformation);
         }
 
         private async Task ResumeAfterCategoryChoise(IDialogContext context, IAwaitable<int> result)
@@ -75,8 +83,9 @@ namespace ChemestryBot.Dialogs
         private void DoNextStep(IDialogContext context)
         {
             // We 
-            if (mCode.PointAt == -1)
+            if (mCode.PointAt < 0)
             {
+                int pointed =  - (mCode.PointAt + 1);
                 context.Call(new ChooseCategoryDialog(mCode), ResumeAfterCategoryChoise);
                 return;
             }

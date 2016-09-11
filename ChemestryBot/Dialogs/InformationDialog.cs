@@ -29,13 +29,14 @@ namespace ChemestryBot.Dialogs
             {
                 IMessageActivity toSend = context.MakeMessage();
                 toSend.Attachments = toShow.Attachments;
+//                toSend.AttachmentLayout = AttachmentLayoutTypes.List;
                 toSend.Text = toShow.Text;
                 ShowActivity(toSend, context);
                 return;
             }
             else // something went wrong
             {
-                mCode.PointAt = -1;
+                mCode.PointAt = -mCode.PointAt - 1;
                 context.Done(mCode);
                 return;
             }
@@ -53,20 +54,12 @@ namespace ChemestryBot.Dialogs
             }
             if (activity.Attachments != null && activity.Attachments.Count > 0)
             {
-                string text = activity.Text;
+//                string text = activity.Text;
                 activity.Text = null;
                 context.PostAsync(activity);
-                
-                                PromptDialog.Choice<string>(
-                                    context,
-                                    ResumeAfterChoise,
-                                    new[]
-                                    {
-                                        ValuesStrings.NEXT//, ValuesStrings.STATISTICS, ValuesStrings.CHANGE_NICK
-                //                        ValuesStrings.ENTER_QUEUE
-                                    },
-                                    text,
-                                    retry: "Sorry, I didn't understand you:( Please be more accurate in your wishes!");
+                context.Wait(ResumeAfterInfoDisplayed);
+                                
+
                 return; // handling would be added later
             }
             PromptDialog.Choice<string>(
@@ -79,6 +72,18 @@ namespace ChemestryBot.Dialogs
                     },
                     activity.Text,
                     retry: "Sorry, I didn't understand you:( Please be more accurate in your wishes!");
+        }
+
+        private async Task ResumeAfterInfoDisplayed(IDialogContext context, IAwaitable<IMessageActivity> result)
+        {
+            var message = await result;
+            switch (message.Text)
+            {
+                case ValuesStrings.NEXT:
+                    mCode = mContent.GetNextCode(mCode);
+                    context.Done(mCode);
+                    return;
+            }
         }
 
         private async Task ResumeAfterChoise(IDialogContext context, IAwaitable<string> result)

@@ -18,44 +18,29 @@ namespace ChemestryBot.UtilClasses
             {
                 Unit temp = MessagesController.BotCategories[code.PointAt].Units[code.IndexArray[code.PointAt]];
                 Activity activity = new Activity(ActivityTypes.Message);
+                var actions = new List<CardAction>();
+                actions.Add(AttachmentCreation.CreateCardAction(ValuesStrings.NEXT, "Next"));
                 
-                activity.Text = temp.description;
-                activity.Summary = temp.description;
+                List<CardImage> imageList = new List<CardImage>();
+//                activity.Text = temp.description;
+//                activity.Summary = temp.description;
                 if (!String.IsNullOrEmpty(temp.imageUrl))
                 {
-                    var att = new Attachment()
-                    {
-                        ContentUrl = temp.imageUrl,
-                        ContentType = "image/png",
-                        Name = temp.name
-                    };
-//                    List<CardImage> cardImages = new List<CardImage>();
-//                    cardImages.Add(new CardImage(temp.imageUrl));
-//                    List<CardAction> cardButtons = new List<CardAction>();
-//                    CardAction plButton = new CardAction()
-//                    {
-////                        Value = "",
-////                        Type = "imBack",// "openUrl",
-////                        Title = "Next"
-//                    };
-//                    cardButtons.Add(plButton);
-//                    HeroCard plCard = new HeroCard()
-//                    {
-//                        Title = temp.name,
-//                        Subtitle = temp.description,
-//                        Images = cardImages,
-//                        Buttons = cardButtons
-//                    };
-//                    Attachment plAttachment = plCard.ToAttachment();
-                    List<Attachment> attachementList = new List<Attachment>();
-                    attachementList.Add(att);
-                    activity.Attachments = attachementList;
+                    CardImage image = new CardImage(temp.imageUrl);
+                    imageList.Add(image);
+                    
+                    
 //                    List<Attachment> attachementList = new List<Attachment>();
 //                    Attachment attachment = new Attachment("image/jpg");
 //                    attachment.ContentUrl = temp.imageUrl;
 //                    activity.Attachments = attachementList;
                 }
 
+                var attachment = AttachmentCreation.CreateHeroCardAttachment(temp.name, null, temp.description,
+                                        imageList, actions);
+                List<Attachment> attachementList = new List<Attachment>();
+                attachementList.Add(attachment);
+                activity.Attachments = attachementList;
                 return activity;
             }
             return null;
